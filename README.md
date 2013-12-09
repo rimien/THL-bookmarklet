@@ -8,7 +8,14 @@ The bookmarklet implementation is largely based on the implemention from Daniel 
 ## The Bookmarklet
 The bookmarklet can be found [here](bookmarklet.html)
 
-<iframe src="https://raw.github.com/rimien/THL-bookmarklet/master/bookmarklet.html">test</iframe>
+# How to install
+- Open the link above
+- Save the raw version of *bookmarklet.html* 
+- Open *bookmarklet.html* in your browser
+- Drag the link into your bookmarks
+- Done!
+
+
 
 
 
