@@ -15,6 +15,8 @@ The bookmarklet can be found [here](bookmarklet.html)
 - Drag the link into your bookmarks
 - Done!
 
+Testet in Firefox and Chrome on OSX.
+
 
 
 
