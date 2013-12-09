@@ -8,8 +8,7 @@ The bookmarklet implementation is largely based on the implemention from Daniel 
 ## The Bookmarklet
 The bookmarklet can be found [here](bookmarklet.html)
 
-
-<a href="javascript:alert('he');">test</a>
+<iframe src="https://raw.github.com/rimien/THL-bookmarklet/master/bookmarklet.html">test</iframe>
 
 
 
