@@ -10,6 +10,7 @@
     if (taskTitle == '') {
         var frames = window.frames;
         for (var i = 0; i < frames.length; i++) {
+        try {
             if (taskTitle == '') {
                 if (frames[i].document != undefined) {
                     taskTitle = frames[i].document.getSelection().toString();
@@ -17,6 +18,7 @@
             } else {
                 break;
             }
+        } catch (e) {}
         }
     }
     // nothing selected? show prompt
@@ -33,7 +35,5 @@
     }
     // redirect to THL
     self.location = "thehitlist:///inbox/tasks?method=POST&title=" + encodeURIComponent(taskTitle) + "&url=" + encodeURIComponent(self.location);
-
-
 })(); 
 
