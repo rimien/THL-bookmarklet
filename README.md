@@ -1,7 +1,7 @@
 THL-bookmarklet
 ===============
 
-(Another) Hit List Bookmarklet
+(Another) The Hit List Bookmarklet
 
 The bookmarklet implementation is largely based on the implemention from Daniel M. Gattermann which can be found here: http://cinnamonthoughts.org/2011/06/10/the-hit-list-bookmarklet-for-mac-and-ios/
 
