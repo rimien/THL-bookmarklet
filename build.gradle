@@ -15,7 +15,7 @@ task generateBookmarklet << {
 
 	project.ant {
 		ant.taskdef(name: 'jscomp', classname: 'com.google.javascript.jscomp.ant.CompileTask', classpath: configurations.js.asPath)
-		jscomp(compilationLevel: 'whitespace' /* or: whitespace, simple */, warning: 'verbose', debug: 'false', output: minified) {
+		jscomp(compilationLevel: 'whitespace', warning: 'verbose', debug: 'false', output: minified) {
 			sources(dir: '.') {
 				file(name: 'bookmarklet.js'){}
 			}
