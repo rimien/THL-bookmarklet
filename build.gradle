@@ -1,0 +1,26 @@
+repositories {  mavenCentral() }
+configurations { js }
+dependencies { js 'com.google.javascript:closure-compiler:r+' }
+
+
+defaultTask 'generateBookmarklet'
+task generateBookmarklet << {
+	description 'generate bookmarklet'
+
+	def minified = 'bookmarklet.min.js'
+	def bookmarklet = 'bookmarklet.html'
+	
+	delete minified
+	delete bookmarklet
+
+	project.ant {
+		ant.taskdef(name: 'jscomp', classname: 'com.google.javascript.jscomp.ant.CompileTask', classpath: configurations.js.asPath)
+		jscomp(compilationLevel: 'whitespace' /* or: whitespace, simple */, warning: 'verbose', debug: 'false', output: minified) {
+			sources(dir: '.') {
+				file(name: 'bookmarklet.js'){}
+			}
+		}
+	}
+	file(bookmarklet) << '<html>Drag this link to your bookmarks: <a href="javascript:@">THL&#10003;</a></html>'.replaceAll(/@/, file(minified).text.replaceAll(/\s/, ' ').replaceAll(/"/, '&quot;'))
+}
+
