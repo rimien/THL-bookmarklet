@@ -7,20 +7,6 @@
     if (window.getSelection) {
         taskTitle = window.getSelection().toString();
     }
-    if (taskTitle == '') {
-        var frames = window.frames;
-        for (var i = 0; i < frames.length; i++) {
-        try {
-            if (taskTitle == '') {
-                if (frames[i].document != undefined) {
-                    taskTitle = frames[i].document.getSelection().toString();
-                }
-            } else {
-                break;
-            }
-        } catch (e) {}
-        }
-    }
     // nothing selected? show prompt
     if (taskTitle == null || taskTitle == "") {
         taskTitle = prompt("Enter a task description or leave empty to use this site's title:");
@@ -35,5 +21,7 @@
     }
     // redirect to THL
     self.location = "thehitlist:///inbox/tasks?method=POST&title=" + encodeURIComponent(taskTitle) + "&url=" + encodeURIComponent(self.location);
+
+    return false;
 })(); 
 

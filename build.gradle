@@ -21,6 +21,6 @@ task generateBookmarklet << {
 			}
 		}
 	}
-	file(bookmarklet) << '<html>Drag this link to your bookmarks: <a href="javascript:@;return false;">THL&#10003;</a></html>'.replaceAll(/@/, file(minified).text.replaceAll(/\s/, ' ').replaceAll(/"/, '&quot;'))
+	file(bookmarklet) << '<html>Drag this link to your bookmarks: <a href="javascript:@">THL&#10003;</a></html>'.replaceAll(/@/, file(minified).text.replaceAll(/\s/, ' ').replaceAll(/"/, '&quot;'))
 }
 
