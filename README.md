@@ -1,5 +1,4 @@
-THL-bookmarklet
-===============
+# (Another) THL-bookmarklet
 
 (Another) The Hit List Bookmarklet
 
@@ -8,7 +7,7 @@ The bookmarklet implementation is largely based on the implemention from Daniel 
 The above version stopped working in modern browsers for many sites because of an uncaught *SecurityException*. The version below fixes this issue.
 
 # How to install the bookmarklet
-- Open the link [this link](bookmarklet.html)
+- Open [this link](bookmarklet.html)
 - Save the raw version of *bookmarklet.html* 
 - Open *bookmarklet.html* in your browser
 - Drag the link into your bookmarks
