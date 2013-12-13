@@ -11,7 +11,7 @@ The above version stopped working in modern browsers for many sites because of a
 - Drag the link into your bookmarks
 - Done!
 
-Testet in:
+Tested:
 - latest version of Firefox, Chrome and Safari on OS X
 - Safari on iOS
 
